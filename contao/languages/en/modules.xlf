@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.1">
-  <file>
+  <file datatype="php" original="languages/en/default.php" source-language="en">
     <body>
       <trans-unit id="FMD.glossary.0">
         <source>Glossary</source>
@@ -8,6 +8,12 @@
       <trans-unit id="FMD.glossary.1">
         <source>Add a Glossary to the page</source>
       </trans-unit>
+      <trans-unit id="MOD.glossary">
+        <source>Glossary</source>
+      </trans-unit>
+       <trans-unit id="MOD.glossary.0">
+        <source>Glossary</source>
+      </trans-unit> 
     </body>
   </file>
 </xliff>
