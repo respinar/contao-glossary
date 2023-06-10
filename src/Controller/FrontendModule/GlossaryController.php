@@ -8,6 +8,9 @@ use Contao\CoreBundle\Controller\FrontendModule\AbstractFrontendModuleController
 use Contao\CoreBundle\DependencyInjection\Attribute\AsFrontendModule;
 use Contao\ModuleModel;
 use Contao\Template;
+use Contao\System;
+use Contao\StringUtil;
+use Contao\FrontendTemplate;
 use Respinar\GlossaryBundle\Model\GlossaryModel;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -24,18 +27,56 @@ class GlossaryController extends AbstractFrontendModuleController
 
         $arrElements = array();
 
-        foreach($objTerms as $objTerm) {
-            $arrElement = array();
-            $arrElement['term'] = $objTerm->term;
-            $arrElement['definition'] = $objTerm->definition;
-            $arrElement['image'] = $objTerm->imgSRC;
-            $arrElement['link'] = $objTerm->url;
-
-            $arrElements[] = $arrElement;
+        foreach($objTerms as $objTerm) {            
+ 
+            $arrElements[] = $this::parseTerm($objTerm, $model);
         }
 
-        $template->arrElemets = $arrElements;
+        $template->arrElements = $arrElements;
 
         return $template->getResponse();
+    }
+
+
+    static public function parseTerm ($objTerm, $model)
+    {
+        $objTemplate = new FrontendTemplate($model->glossary_term_template);
+
+		$objTemplate->setData($objTerm->row());
+        
+
+        $objTemplate->link = $objTerm->url;
+
+        
+
+        if ($objTerm->imgSRC)
+        {
+            //$imgSize = $objArticle->size ?: null;
+
+			// Override the default image size
+			if ($model->imgSize)
+			{
+				$size = StringUtil::deserialize($model->imgSize);
+
+				if ($size[0] > 0 || $size[1] > 0 || is_numeric($size[2]) || ($size[2][0] ?? null) === '_')
+				{
+					$imgSize = $model->imgSize;
+				}
+			}
+
+            $figureBuilder = System::getContainer()
+                ->get('contao.image.studio')
+                ->createFigureBuilder()
+                ->setSize($imgSize)
+                ->from($objTerm->imgSRC);
+            $figure = $figureBuilder->build();
+        }
+
+        if (null !== $figure)
+		{
+			$figure->applyLegacyTemplateData($objTemplate);
+		}
+
+        return $objTemplate->parse();
     }
 }
