@@ -2,13 +2,10 @@
 
 <?php $this->block('content'); ?>
   
-<?php foreach($this->arrElemets as $arrElement): ?>
-  <div class="term">
-    <p><?= $arrElement['term'] ?>: <?= $arrElement['definition'] ?></p>
-    <p><?= $arrElement['image'] ?> - <?= $arrElement['url'] ?></p>
-
-  </div>
-  <hr>
-<?php endforeach; ?>  
+<?php 
+  foreach($this->arrElements as $term) {
+    echo $term;
+  }
+?>  
 
 <?php $this->endblock(); ?>
