@@ -18,15 +18,15 @@ use Contao\DC_Table;
 use Contao\Input;
 
 /**
- * Table tl_glossary
+ * Table tl_glossary_term
  */
-$GLOBALS['TL_DCA']['tl_glossary'] = array(
+$GLOBALS['TL_DCA']['tl_glossary_term'] = array(
     'config'      => array(
         'dataContainer'    => DC_Table::class,
-        'ctabel'           => array('tl_glossary_term'),
+        'ptable'           => 'tl_glossary',
         'enableVersioning' => true,
         'switchToEdit'     => true,
-        'markAsCopy'       => 'title',
+        'markAsCopy'       => 'term',
         'sql'              => array(
             'keys' => array(
                 'id' => 'primary'
@@ -36,12 +36,12 @@ $GLOBALS['TL_DCA']['tl_glossary'] = array(
     'list'        => array(
         'sorting'           => array(
             'mode'        => DataContainer::MODE_SORTABLE,
-            'fields'      => array('title'),
+            'fields'      => array('term'),
             'flag'        => DataContainer::SORT_INITIAL_LETTER_ASC,
             'panelLayout' => 'filter;search,limit'
         ),
         'label'             => array(
-            'fields' => array('title'),
+            'fields' => array('term'),
             'format' => '%s',
         ),
         'global_operations' => array(
@@ -53,12 +53,8 @@ $GLOBALS['TL_DCA']['tl_glossary'] = array(
         ),
         'operations'        => array(
             'edit'   => array(
-                'href'  => 'table=tl_glossary_term',
-                'icon'  => 'edit.svg'
-            ),
-            'editheader'   => array(
                 'href'  => 'act=edit',
-                'icon'  => 'header.svg'
+                'icon'  => 'edit.svg'
             ),            
             'copy'   => array(
                 'href'  => 'act=copy',
@@ -82,7 +78,10 @@ $GLOBALS['TL_DCA']['tl_glossary'] = array(
 	(
 		'__selector__'                => array(),
 		'default'                     => '
-            {title_legend},title;'            
+            {term_legend},term,url;
+            {definition_legend},definition;
+            {image_legend},imgSRC;			
+			{publish_legend},published,start,stop'
 	),
 
 	// Subpalettes
@@ -94,15 +93,68 @@ $GLOBALS['TL_DCA']['tl_glossary'] = array(
         'id' => array(
             'sql' => "int(10) unsigned NOT NULL auto_increment"
         ),
+        'pid' => array
+		(
+			'foreignKey' => 'tl_glossary.title',
+			'sql'        => "int(10) unsigned NOT NULL default 0",
+			'relation'   => array('type'=>'belongsTo', 'load'=>'lazy')
+		),
         'tstamp' => array(
             'sql' => "int(10) unsigned NOT NULL default '0'"
         ),
-        'title' => array(
+        'term' => array(
             'exclude'   => true,
 			'search'    => true,
 			'inputType' => 'text',
 			'eval'      => array('mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50'),
 			'sql'       => "varchar(255) NOT NULL default ''"
-        )
+        ),
+        'definition'=> array(
+            'exclude'   => true,
+			'search'    => true,
+			'inputType' => 'textarea',
+			'eval'      => array('rte'=>'tinyMCE', 'tl_class'=>'clr'),
+			'sql'       => "text NULL"
+        ),
+        'url' => array
+		(
+			'exclude'                 => true,
+			'search'                  => true,
+			'inputType'               => 'text',
+			'eval'                    => array('mandatory'=>false, 'rgxp'=>'url', 'decodeEntities'=>true, 'maxlength'=>2048, 'dcaPicker'=>true, 'tl_class'=>'w50'),
+			'sql'                     => "varchar(2048) NOT NULL default ''"
+		),
+        'imgSRC' => array
+		(
+			'exclude'                 => true,
+			'inputType'               => 'fileTree',
+			'eval'                    => array( 'mandatory'=>false, 'fieldType'=>'radio', 'filesOnly'=>true, 'extensions'=>'%contao.image.valid_extensions%'),
+			'sql'                     => "binary(16) NULL"
+		),
+        'published' => array
+		(
+			'exclude'                 => true,
+			'toggle'                  => true,
+			'filter'                  => true,
+			'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
+			'inputType'               => 'checkbox',
+			'eval'                    => array('doNotCopy'=>true),
+			'sql'                     => "char(1) NOT NULL default ''"
+		),
+		'start' => array
+		(
+			'exclude'                 => true,
+			'inputType'               => 'text',
+			'eval'                    => array('rgxp'=>'datim', 'datepicker'=>true, 'tl_class'=>'w50 wizard'),
+			'sql'                     => "varchar(10) NOT NULL default ''"
+		),
+		'stop' => array
+		(
+			'exclude'                 => true,
+			'inputType'               => 'text',
+			'eval'                    => array('rgxp'=>'datim', 'datepicker'=>true, 'tl_class'=>'w50 wizard'),
+			'sql'                     => "varchar(10) NOT NULL default ''"
+		)
+
     )
 );

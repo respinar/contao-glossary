@@ -11,9 +11,9 @@ use Contao\Template;
 use Contao\System;
 use Contao\StringUtil;
 use Contao\FrontendTemplate;
-use Respinar\GlossaryBundle\Model\GlossaryModel;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Respinar\GlossaryBundle\Model\GlossaryTermModel;
 
 #[AsFrontendModule(category: "miscellaneous")]
 class GlossaryController extends AbstractFrontendModuleController
@@ -23,7 +23,26 @@ class GlossaryController extends AbstractFrontendModuleController
     protected function getResponse(Template $template, ModuleModel $model, Request $request): Response
     {
 
-        $objTerms = GlossaryModel::findAll();
+
+        // Determine sorting
+		$t = GlossaryTermModel::getTable();
+		$arrOptions = array();
+
+		switch ($model->glossary_term_order)
+		{
+			case 'order_term_asc':
+				$arrOptions['order'] = "$t.term";
+				break;
+
+			case 'order_term_desc':
+				$arrOptions['order'] = "$t.term DESC";
+				break;
+
+			default:
+				$arrOptions['order'] = "$t.term";
+		}
+
+        $objTerms = GlossaryTermModel::findBy('pid', $model->glossary, $arrOptions);
 
         $arrElements = array();
 
