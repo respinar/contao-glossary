@@ -11,10 +11,9 @@ use Contao\Template;
 use Contao\System;
 use Contao\StringUtil;
 use Contao\FrontendTemplate;
-use Respinar\GlossaryBundle\Model\GlossaryModel;
-use Respinar\GlossaryBundle\Model\GlossaryTermModel;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Respinar\GlossaryBundle\Model\GlossaryTermModel;
 
 #[AsFrontendModule(category: "miscellaneous")]
 class GlossaryController extends AbstractFrontendModuleController
