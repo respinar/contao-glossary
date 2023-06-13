@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+  <file datatype="php" original="languages/en/tl_glossary_term.php" source-language="en">
+    <body>
+      <trans-unit id="tl_glossary_term.term.0">
+        <source>Term</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.term.1">
+        <source>Please enter the term.</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.definition.0">
+        <source>Definition</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.definition.1">
+        <source>Please enter the definition.</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.url.0">
+        <source>Link</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.url.1">
+        <source>Please select the page.</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.imgSRC.0">
+        <source>Image</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.imgSRC.1">
+        <source>Please select an image.</source>
+      </trans-unit>
+       <trans-unit id="tl_glossary_term.published.0">
+        <source>Publish term</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.published.1">
+        <source>Make the term item publicly visible on the website.</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.start.0">
+        <source>Show from</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.start.1">
+        <source>If you want to prevent the term from showing on the website before a certain date/time, you can enter it here. Otherwise, leave the field blank.</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.stop.0">
+        <source>Show until</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.stop.1">
+        <source>If you want to prevent the term from showing on the website after a certain date/time, you can enter it here. Otherwise, leave the field blank.</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.term_legend">
+        <source>Term and link</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.definition_legend">
+        <source>Definition</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.image_legend">
+        <source>Image settings</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.publish_legend">
+        <source>Publish settings</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
