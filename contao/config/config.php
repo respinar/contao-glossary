@@ -24,4 +24,4 @@ $GLOBALS['BE_MOD']['content']['glossary'] = array(
  * Models
  */
 $GLOBALS['TL_MODELS']['tl_glossary'] = GlossaryModel::class;
-$GLOBALS['TL_MODELS']['tl_glossary'] = GlossaryTermModel::class;
+$GLOBALS['TL_MODELS']['tl_glossary_term'] = GlossaryTermModel::class;
