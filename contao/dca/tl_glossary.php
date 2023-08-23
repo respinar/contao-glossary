@@ -5,11 +5,9 @@ declare(strict_types=1);
 /*
  * This file is part of Contao Simple Podcast.
  *
- * (c) Hamid Abbaszadeh 2023 <abbaszadeh.h@gmail.com>
+ * (c) Hamid Peywasti 2023 <hamid@respinar.com>
+ *
  * @license MIT
- * For the full copyright and license information,
- * please view the LICENSE file that was distributed with this source code.
- * @link https://github.com/respinar/contao-glossary
  */
 
 use Contao\Backend;
@@ -59,7 +57,7 @@ $GLOBALS['TL_DCA']['tl_glossary'] = array(
             'editheader'   => array(
                 'href'  => 'act=edit',
                 'icon'  => 'header.svg'
-            ),            
+            ),
             'copy'   => array(
                 'href'  => 'act=copy',
                 'icon'  => 'copy.svg'
@@ -82,13 +80,13 @@ $GLOBALS['TL_DCA']['tl_glossary'] = array(
 	(
 		'__selector__'                => array(),
 		'default'                     => '
-            {title_legend},title;'            
+            {title_legend},title;'
 	),
 
 	// Subpalettes
 	'subpalettes' => array
 	(
-		'protected'                   => 'groups',		
+		'protected'                   => 'groups',
 	),
     'fields' => array(
         'id' => array(
