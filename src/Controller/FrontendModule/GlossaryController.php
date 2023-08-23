@@ -2,6 +2,14 @@
 
 declare(strict_types=1);
 
+/*
+ * This file is part of Contao Simple Podcast.
+ *
+ * (c) Hamid Peywasti 2023 <hamid@respinar.com>
+ *
+ * @license MIT
+ */
+
 namespace Respinar\GlossaryBundle\Controller\FrontendModule;
 
 use Contao\CoreBundle\Controller\FrontendModule\AbstractFrontendModuleController;
@@ -46,8 +54,8 @@ class GlossaryController extends AbstractFrontendModuleController
 
         $arrElements = array();
 
-        foreach($objTerms as $objTerm) {            
- 
+        foreach($objTerms as $objTerm) {
+
             $arrElements[] = $this::parseTerm($objTerm, $model);
         }
 
@@ -62,11 +70,11 @@ class GlossaryController extends AbstractFrontendModuleController
         $objTemplate = new FrontendTemplate($model->glossary_term_template);
 
 		$objTemplate->setData($objTerm->row());
-        
+
 
         $objTemplate->link = $objTerm->url;
 
-        
+
 
         if ($objTerm->imgSRC)
         {
