@@ -93,7 +93,7 @@ $GLOBALS['TL_DCA']['tl_glossary'] = array(
             'sql' => "int(10) unsigned NOT NULL auto_increment"
         ),
         'tstamp' => array(
-            'sql' => "int(10) unsigned NOT NULL default '0'"
+            'sql' => "int(10) unsigned NOT NULL default 0"
         ),
         'title' => array(
             'exclude'   => true,
