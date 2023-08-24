@@ -78,7 +78,7 @@ class GlossaryController extends AbstractFrontendModuleController
 
         if ($objTerm->imgSRC)
         {
-            //$imgSize = $objArticle->size ?: null;
+            $imgSize = $model->imgSize ?: null;
 
 			// Override the default image size
 			if ($model->imgSize)
