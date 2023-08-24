@@ -13,7 +13,10 @@
       </trans-unit>
        <trans-unit id="MOD.glossary.0">
         <source>Glossary</source>
-      </trans-unit> 
+      </trans-unit>
+      <trans-unit id="MSC.moreDetail">
+        <source>More details</source>
+      </trans-unit>
     </body>
   </file>
 </xliff>
