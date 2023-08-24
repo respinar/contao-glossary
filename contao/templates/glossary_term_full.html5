@@ -1,4 +1,4 @@
-<div class="term">
+  <div class="term">
     <?php $this->insert('image', $this->arrData); ?>
     <h3 class="term"><?= $this->term ?></h3>
     <p class="definition"><?= $this->definition ?></p>
