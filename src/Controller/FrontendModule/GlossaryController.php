@@ -71,10 +71,8 @@ class GlossaryController extends AbstractFrontendModuleController
 
 		$objTemplate->setData($objTerm->row());
 
-
         $objTemplate->link = $objTerm->url;
-
-
+        $objTemplate->moreDetail = $GLOBALS['TL_LANG']['MSC']['moreDetail'];
 
         if ($objTerm->imgSRC)
         {
@@ -103,6 +101,8 @@ class GlossaryController extends AbstractFrontendModuleController
 		{
 			$figure->applyLegacyTemplateData($objTemplate);
 		}
+
+
 
         return $objTemplate->parse();
     }
