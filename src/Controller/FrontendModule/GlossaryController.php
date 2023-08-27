@@ -31,7 +31,6 @@ class GlossaryController extends AbstractFrontendModuleController
     protected function getResponse(Template $template, ModuleModel $model, Request $request): Response
     {
 
-
         // Determine sorting
 		$t = GlossaryTermModel::getTable();
 		$arrOptions = array();
@@ -63,7 +62,6 @@ class GlossaryController extends AbstractFrontendModuleController
 
         return $template->getResponse();
     }
-
 
     static public function parseTerm ($objTerm, $model)
     {
@@ -101,8 +99,6 @@ class GlossaryController extends AbstractFrontendModuleController
 		{
 			$figure->applyLegacyTemplateData($objTemplate);
 		}
-
-
 
         return $objTemplate->parse();
     }
