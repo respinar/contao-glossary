@@ -33,9 +33,8 @@ $GLOBALS['TL_DCA']['tl_glossary'] = array(
     ),
     'list'        => array(
         'sorting'           => array(
-            'mode'        => DataContainer::MODE_SORTABLE,
+            'mode'        => DataContainer::MODE_UNSORTED,
             'fields'      => array('title'),
-            'flag'        => DataContainer::SORT_INITIAL_LETTER_ASC,
             'panelLayout' => 'filter;search,limit'
         ),
         'label'             => array(
