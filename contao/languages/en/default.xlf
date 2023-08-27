@@ -8,12 +8,15 @@
       <trans-unit id="FMD.glossary.1">
         <source>Add a Glossary to the page</source>
       </trans-unit>
-      <trans-unit id="MOD.glossary">
+      <trans-unit id="MOD.glossary.0">
         <source>Glossary</source>
       </trans-unit>
-       <trans-unit id="MOD.glossary.0">
+       <trans-unit id="MOD.glossary.1">
         <source>Glossary</source>
-      </trans-unit> 
+      </trans-unit>
+      <trans-unit id="MSC.moreDetail">
+        <source>More details</source>
+      </trans-unit>
     </body>
   </file>
 </xliff>

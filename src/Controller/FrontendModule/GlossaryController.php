@@ -31,7 +31,6 @@ class GlossaryController extends AbstractFrontendModuleController
     protected function getResponse(Template $template, ModuleModel $model, Request $request): Response
     {
 
-
         // Determine sorting
 		$t = GlossaryTermModel::getTable();
 		$arrOptions = array();
@@ -64,21 +63,18 @@ class GlossaryController extends AbstractFrontendModuleController
         return $template->getResponse();
     }
 
-
     static public function parseTerm ($objTerm, $model)
     {
         $objTemplate = new FrontendTemplate($model->glossary_term_template);
 
 		$objTemplate->setData($objTerm->row());
 
+    $objTemplate->link = $objTerm->url;
+    $objTemplate->moreDetail = $GLOBALS['TL_LANG']['MSC']['moreDetail']; // more Detail
 
-        $objTemplate->link = $objTerm->url;
-
-
-
-        if ($objTerm->imgSRC)
+    if ($objTerm->imgSRC)
         {
-            //$imgSize = $objArticle->size ?: null;
+            $imgSize = $model->imgSize ?: null;
 
 			// Override the default image size
 			if ($model->imgSize)
