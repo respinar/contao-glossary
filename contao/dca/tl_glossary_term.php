@@ -98,7 +98,7 @@ $GLOBALS['TL_DCA']['tl_glossary_term'] = array(
 			'relation'   => array('type'=>'belongsTo', 'load'=>'lazy')
 		),
         'tstamp' => array(
-            'sql' => "int(10) unsigned NOT NULL default '0'"
+            'sql' => "int(10) unsigned NOT NULL default 0"
         ),
         'term' => array(
             'exclude'   => true,

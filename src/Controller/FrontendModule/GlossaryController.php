@@ -69,10 +69,10 @@ class GlossaryController extends AbstractFrontendModuleController
 
 		$objTemplate->setData($objTerm->row());
 
-        $objTemplate->link = $objTerm->url;
-        $objTemplate->moreDetail = $GLOBALS['TL_LANG']['MSC']['moreDetail']; // more Detail
+    $objTemplate->link = $objTerm->url;
+    $objTemplate->moreDetail = $GLOBALS['TL_LANG']['MSC']['moreDetail']; // more Detail
 
-        if ($objTerm->imgSRC)
+    if ($objTerm->imgSRC)
         {
             $imgSize = $model->imgSize ?: null;
 
