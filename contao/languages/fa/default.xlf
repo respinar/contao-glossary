@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.1">
-  <file datatype="php" original="languages/en/default.php" source-language="en">
+  <file datatype="php" original="languages/en/default.php" source-language="en" target-language="fa">
     <body>
       <trans-unit id="FMD.glossary.0">
         <source>واژه‌نامه</source>
@@ -8,10 +8,10 @@
       <trans-unit id="FMD.glossary.1">
         <source>یک واژه‌نامه به برگه اضافه می‌کند.</source>
       </trans-unit>
-      <trans-unit id="MOD.glossary">
+      <trans-unit id="MOD.glossary.0">
         <source>واژه‌نامه</source>
       </trans-unit>
-       <trans-unit id="MOD.glossary.0">
+       <trans-unit id="MOD.glossary.1">
         <source>واژه‌نامه</source>
       </trans-unit>
       <trans-unit id="MSC.moreDetail">
