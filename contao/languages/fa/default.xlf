@@ -14,7 +14,7 @@
        <trans-unit id="MOD.glossary.1">
         <source>واژه‌نامه</source>
       </trans-unit>
-      <trans-unit id="MSC.moreDetail">
+      <trans-unit id="MSC.termDetail">
         <source>توضیحات بیشتر</source>
       </trans-unit>
     </body>
