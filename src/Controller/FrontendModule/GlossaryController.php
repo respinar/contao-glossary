@@ -70,7 +70,7 @@ class GlossaryController extends AbstractFrontendModuleController
 		$objTemplate->setData($objTerm->row());
 
     $objTemplate->link = $objTerm->url;
-    $objTemplate->moreDetail = $GLOBALS['TL_LANG']['MSC']['moreDetail']; // more Detail
+    $objTemplate->moreDetail = $GLOBALS['TL_LANG']['MSC']['termDetail']; // more Detail
 
     if ($objTerm->imgSRC)
         {
