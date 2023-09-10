@@ -14,7 +14,7 @@
        <trans-unit id="MOD.glossary.1">
         <source>Glossary</source>
       </trans-unit>
-      <trans-unit id="MSC.moreDetail">
+      <trans-unit id="MSC.termDetail">
         <source>More details</source>
       </trans-unit>
     </body>
