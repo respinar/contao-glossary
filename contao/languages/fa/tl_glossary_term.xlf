@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+  <file datatype="php" original="languages/en/tl_glossary_term.php" source-language="en">
+    <body>
+      <trans-unit id="tl_glossary_term.term.0">
+        <source>واژه</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.term.1">
+        <source>لطفا یک واژه وارد کنید.</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.definition.0">
+        <source>تعریف</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.definition.1">
+        <source>لطفا تعریف را وارد کنید.</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.url.0">
+        <source>پیوند</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.url.1">
+        <source>لطفا یک برگه انتخاب کنید.</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.imgSRC.0">
+        <source>تصویر</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.imgSRC.1">
+        <source>لطفا یک تصویر انتخاب کنید.</source>
+      </trans-unit>
+       <trans-unit id="tl_glossary_term.published.0">
+        <source>انتشار واژه</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.published.1">
+        <source>با انتخاب این گزینه واژه به صورت عمومی در وب‌سایت نمایش داده خواهد شد.</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.start.0">
+        <source>نمایش از</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.start.1">
+        <source>اگر می‌خواهید قبل از تاریخ/زمان خاصی از نمایش این عبارت در وب‌سایت جلوگیری کنید، می‌توانید آن را در اینجا وارد کنید. در غیر این صورت، قسمت را خالی بگذارید.</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.stop.0">
+        <source>نمایش تا</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.stop.1">
+        <source>اگر می خواهید بعد از تاریخ/زمان معینی از نمایش عبارت در وب سایت جلوگیری کنید، می توانید آن را در اینجا وارد کنید. در غیر این صورت، قسمت را خالی بگذارید.</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.term_legend">
+        <source>واژه و پیوند</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.definition_legend">
+        <source>تعریف</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.image_legend">
+        <source>تنظیمات تصویر</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.publish_legend">
+        <source>تنظیمات انتضار</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
