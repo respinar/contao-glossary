@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+  <file datatype="php" original="languages/en/tl_glossary.php" source-language="en">
+    <body>
+      <trans-unit id="tl_glossary.title.0">
+        <source>عنوان واژه‌نامه</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary.title.1">
+        <source>لطفا عنوان واژه‌نامه را وارد کنید.</source>
+      </trans-unit>
+      <trans-unit id="tl_glossary.title_legend">
+        <source>عنوان</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
