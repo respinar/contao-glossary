@@ -7,10 +7,10 @@
       </trans-unit>
       <trans-unit id="tl_glossary.title.1">
         <source>Please enter the title.</source>
-      </trans-unit>     
+      </trans-unit>
       <trans-unit id="tl_glossary.title_legend">
-        <source>Ttitle</source>
-      </trans-unit>      
+        <source>Title</source>
+      </trans-unit>
     </body>
   </file>
 </xliff>
