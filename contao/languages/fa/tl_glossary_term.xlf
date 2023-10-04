@@ -15,10 +15,10 @@
         <target>لطفا تعریف را وارد کنید.</target>
       </trans-unit>
       <trans-unit id="tl_glossary_term.url.0">
-        <target>پیوند</target>
+        <target>لینک</target>
       </trans-unit>
       <trans-unit id="tl_glossary_term.url.1">
-        <target>لطفا یک برگه انتخاب کنید.</target>
+        <target>لطفا یک برگه برای لینک انتخاب کنید.</target>
       </trans-unit>
       <trans-unit id="tl_glossary_term.imgSRC.0">
         <target>تصویر</target>
