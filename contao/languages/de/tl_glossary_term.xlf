@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+  <file datatype="php" original="languages/en/tl_glossary_term.php" source-language="en" target-language="de">
+    <body>
+      <trans-unit id="tl_glossary_term.term.0">
+        <target>Begriff</target>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.term.1">
+        <target>Bitte geben Sie den Begriff ein.</target>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.definition.0">
+        <target>Definition</target>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.definition.1">
+        <target>Bitte geben Sie die Definition ein.</target>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.url.0">
+        <target>Link</target>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.url.1">
+        <target>Bitte wählen Sie die Seite aus.</target>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.imgSRC.0">
+        <target>Bild</target>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.imgSRC.1">
+        <target>Bitte wählen Sie ein Bild aus.</target>
+      </trans-unit>
+       <trans-unit id="tl_glossary_term.published.0">
+        <target>Begriff veröffentlichen</target>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.published.1">
+        <target>Machen Sie das Begriffselement auf der Website öffentlich sichtbar.</target>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.start.0">
+        <target>Anzeigen ab</target>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.start.1">
+        <target>Wenn Sie den Beitrag erst ab einem bestimmten Zeitpunkt auf der Webseite anzeigen möchten, können Sie diesen hier eingeben. Andernfalls lassen Sie das Feld leer. </target>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.stop.0">
+        <target>Anzeigen bis</target>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.stop.1">
+        <target>Wenn Sie den Beitrag nur bis zu einem bestimmten Zeitpunkt auf der Webseite anzeigen möchten, können Sie diesen hier eingeben. Andernfalls lassen Sie das Feld leer. </target>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.term_legend">
+        <target>Begriff und Link</target>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.definition_legend">
+        <target>Definition</target>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.image_legend">
+        <target>Bildeinstellungen</target>
+      </trans-unit>
+      <trans-unit id="tl_glossary_term.publish_legend">
+        <target>Veröffentlichung</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
