@@ -3,12 +3,15 @@
   <file datatype="php" original="languages/en/tl_glossary.php" source-language="en" target-language="de">
     <body>
       <trans-unit id="tl_glossary.title.0">
+        <source>Title</source>
         <target>Titel</target>
       </trans-unit>
       <trans-unit id="tl_glossary.title.1">
+        <source>Please enter the title.</source>
         <target>Bitte geben Sie den Titel ein.</target>
       </trans-unit>
       <trans-unit id="tl_glossary.title_legend">
+        <source>Title</source>
         <target>Titel</target>
       </trans-unit>
     </body>
