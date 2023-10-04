@@ -3,18 +3,23 @@
   <file datatype="php" original="languages/en/default.php" source-language="en" target-language="de">
     <body>
       <trans-unit id="FMD.glossary.0">
+        <source>Glossary</source>
         <target>Glossar</target>
       </trans-unit>
       <trans-unit id="FMD.glossary.1">
+        <source>Add a Glossary to the page</source>
         <target>Fügen Sie der Seite ein Glossar hinzu</target>
       </trans-unit>
       <trans-unit id="MOD.glossary.0">
+        <source>Glossary</source>
         <target>Glossar</target>
       </trans-unit>
-       <trans-unit id="MOD.glossary.1">
+      <trans-unit id="MOD.glossary.1">
+        <source>Glossary</source>
         <target>Glossar</target>
       </trans-unit>
       <trans-unit id="MSC.termDetail">
+        <source>More details</source>
         <target>Mehr Details</target>
       </trans-unit>
     </body>
