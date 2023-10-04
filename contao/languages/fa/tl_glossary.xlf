@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.1">
-  <file datatype="php" original="languages/en/tl_glossary.php" source-language="en">
+  <file datatype="php" original="languages/en/tl_glossary.php" source-language="en" target-language="fa">
     <body>
       <trans-unit id="tl_glossary.title.0">
-        <source>عنوان واژه‌نامه</source>
+        <target>عنوان واژه‌نامه</target>
       </trans-unit>
       <trans-unit id="tl_glossary.title.1">
-        <source>لطفا عنوان واژه‌نامه را وارد کنید.</source>
+        <target>لطفا عنوان واژه‌نامه را وارد کنید.</target>
       </trans-unit>
       <trans-unit id="tl_glossary.title_legend">
-        <source>عنوان</source>
+        <target>عنوان</target>
       </trans-unit>
     </body>
   </file>
