@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+  <file datatype="php" original="languages/en/tl_glossary.php" source-language="en" target-language="de">
+    <body>
+      <trans-unit id="tl_glossary.title.0">
+        <target>Titel</target>
+      </trans-unit>
+      <trans-unit id="tl_glossary.title.1">
+        <target>Bitte geben Sie den Titel ein.</target>
+      </trans-unit>
+      <trans-unit id="tl_glossary.title_legend">
+        <target>Titel</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
