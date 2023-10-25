@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of Contao Simple Podcast.
+ * This file is part of Contao Simple Glossary.
  *
  * (c) Hamid Peywasti 2023 <hamid@respinar.com>
  *
