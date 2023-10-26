@@ -23,7 +23,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Respinar\GlossaryBundle\Model\GlossaryTermModel;
 
-#[AsFrontendModule(category: "miscellaneous")]
+#[AsFrontendModule(category: "miscellaneous", template:"mod_glossary")]
 class GlossaryController extends AbstractFrontendModuleController
 {
     public const TYPE = 'glossary';
