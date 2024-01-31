@@ -137,7 +137,7 @@ $GLOBALS['TL_DCA']['tl_glossary_term'] = array(
 			'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
 			'inputType'               => 'checkbox',
 			'eval'                    => array('doNotCopy'=>true),
-			'sql'                     => "char(1) NOT NULL default ''"
+			'sql'                     => ['type' => 'boolean', 'default' => false]
 		),
 		'start' => array
 		(
