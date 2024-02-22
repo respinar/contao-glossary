@@ -18,141 +18,128 @@ use Contao\Input;
 /**
  * Table tl_glossary_term
  */
-$GLOBALS['TL_DCA']['tl_glossary_term'] = array(
-    'config'      => array(
+$GLOBALS['TL_DCA']['tl_glossary_term'] = [
+    'config' => [
         'dataContainer'    => DC_Table::class,
         'ptable'           => 'tl_glossary',
         'enableVersioning' => true,
         'switchToEdit'     => true,
         'markAsCopy'       => 'term',
-        'sql'              => array(
-            'keys' => array(
+        'sql'              => [
+            'keys' => [
                 'id' => 'primary'
-            )
-        ),
-    ),
-    'list'        => array(
-        'sorting'           => array(
+            ]
+        ],
+    ],
+    'list' => [
+        'sorting' => [
             'mode'        => DataContainer::MODE_SORTABLE,
-            'fields'      => array('term'),
+            'fields'      => ['term'],
             'flag'        => DataContainer::SORT_INITIAL_LETTER_ASC,
             'panelLayout' => 'filter;search,limit'
-        ),
-        'label'             => array(
-            'fields' => array('term'),
+        ],
+        'label'             => [
+            'fields' => ['term'],
             'format' => '%s',
-        ),
-        'global_operations' => array(
-            'all' => array(
+        ],
+        'global_operations' => [
+            'all' => [
                 'href'       => 'act=select',
                 'class'      => 'header_edit_all',
                 'attributes' => 'onclick="Backend.getScrollOffset()" accesskey="e"'
-            )
-        ),
-        'operations'        => array(
-            'edit'   => array(
+            ]
+        ],
+        'operations' => [
+            'edit' => [
                 'href'  => 'act=edit',
                 'icon'  => 'edit.svg'
-            ),
-            'copy'   => array(
+            ],
+            'copy' => [
                 'href'  => 'act=copy',
                 'icon'  => 'copy.svg'
-            ),
-            'delete' => array(
+            ],
+            'delete' => [
                 'href'       => 'act=delete',
                 'icon'       => 'delete.svg',
                 'attributes' => 'onclick="if(!confirm(\'' . ($GLOBALS['TL_LANG']['MSC']['deleteConfirm'] ?? null) . '\'))return false;Backend.getScrollOffset()"'
-            ),
-            'show'   => array(
+            ],
+            'show' => [
                 'href'       => 'act=show',
                 'icon'       => 'show.svg',
                 'attributes' => 'style="margin-right:3px"'
-            ),
-        )
-    ),
+            ],
+        ]
+    ],
 
     // Palettes
-    'palettes' => array
-	(
-		'__selector__'                => array(),
-		'default'                     => '
-            {term_legend},term,url;
-            {definition_legend},definition;
-            {image_legend},imgSRC;
-			{publish_legend},published,start,stop'
-	),
+    'palettes' => [
+		'__selector__' => [],
+		'default' => '{term_legend},term,url;{definition_legend},definition;{image_legend},imgSRC;{publish_legend},published,start,stop'
+    ],
 
 	// Subpalettes
-	'subpalettes' => array
-	(
-		'protected'                   => 'groups',
-	),
-    'fields' => array(
-        'id' => array(
+	'subpalettes' => [
+		'protected' => 'groups',
+    ],
+    'fields' => [
+        'id' => [
             'sql' => "int(10) unsigned NOT NULL auto_increment"
-        ),
-        'pid' => array
-		(
+        ],
+        'pid' => [
 			'foreignKey' => 'tl_glossary.title',
 			'sql'        => "int(10) unsigned NOT NULL default 0",
-			'relation'   => array('type'=>'belongsTo', 'load'=>'lazy')
-		),
-        'tstamp' => array(
+			'relation'   => ['type' => 'belongsTo', 'load' => 'lazy']
+        ],
+        'tstamp' => [
             'sql' => "int(10) unsigned NOT NULL default 0"
-        ),
-        'term' => array(
+        ],
+        'term' => [
             'exclude'   => true,
 			'search'    => true,
 			'inputType' => 'text',
-			'eval'      => array('mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50'),
+			'eval'      => ['mandatory' => true, 'maxlength' => 255, 'tl_class' => 'w50'],
 			'sql'       => "varchar(255) NOT NULL default ''"
-        ),
-        'definition'=> array(
+        ],
+        'definition' => [
             'exclude'   => true,
 			'search'    => true,
 			'inputType' => 'textarea',
-			'eval'      => array('rte'=>'tinyMCE', 'tl_class'=>'clr'),
+			'eval'      => ['rte' => 'tinyMCE', 'tl_class' => 'clr'],
 			'sql'       => "text NULL"
-        ),
-        'url' => array
-		(
-			'exclude'                 => true,
-			'search'                  => true,
-			'inputType'               => 'text',
-			'eval'                    => array('mandatory'=>false, 'rgxp'=>'url', 'decodeEntities'=>true, 'maxlength'=>2048, 'dcaPicker'=>true, 'tl_class'=>'w50'),
-			'sql'                     => "varchar(2048) NOT NULL default ''"
-		),
-        'imgSRC' => array
-		(
-			'exclude'                 => true,
-			'inputType'               => 'fileTree',
-			'eval'                    => array( 'mandatory'=>false, 'fieldType'=>'radio', 'filesOnly'=>true, 'extensions'=>'%contao.image.valid_extensions%'),
-			'sql'                     => "binary(16) NULL"
-		),
-        'published' => array
-		(
-			'exclude'                 => true,
-			'toggle'                  => true,
-			'filter'                  => true,
-			'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
-			'inputType'               => 'checkbox',
-			'eval'                    => array('doNotCopy'=>true),
-			'sql'                     => ['type' => 'boolean', 'default' => false]
-		),
-		'start' => array
-		(
-			'exclude'                 => true,
-			'inputType'               => 'text',
-			'eval'                    => array('rgxp'=>'datim', 'datepicker'=>true, 'tl_class'=>'w50 wizard'),
-			'sql'                     => "varchar(10) NOT NULL default ''"
-		),
-		'stop' => array
-		(
-			'exclude'                 => true,
-			'inputType'               => 'text',
-			'eval'                    => array('rgxp'=>'datim', 'datepicker'=>true, 'tl_class'=>'w50 wizard'),
-			'sql'                     => "varchar(10) NOT NULL default ''"
-		)
-
-    )
-);
+        ],
+        'url' => [
+			'exclude'   => true,
+			'search'    => true,
+			'inputType' => 'text',
+			'eval'      => ['mandatory' =>false, 'rgxp' => 'url', 'decodeEntities' => true, 'maxlength' => 2048, 'dcaPicker' => true, 'tl_class' => 'w50'],
+			'sql'       => "varchar(2048) NOT NULL default ''"
+        ],
+        'imgSRC' => [
+			'exclude'   => true,
+			'inputType' => 'fileTree',
+			'eval'      => ['mandatory' => false, 'fieldType' => 'radio', 'filesOnly' => true, 'extensions' => '%contao.image.valid_extensions%'],
+			'sql'       => "binary(16) NULL"
+        ],
+        'published' => [
+			'exclude'   => true,
+			'toggle'    => true,
+			'filter'    => true,
+			'flag'      => DataContainer::SORT_INITIAL_LETTER_ASC,
+			'inputType' => 'checkbox',
+			'eval'      => ['doNotCopy' => true],
+			'sql'       => ['type' => 'boolean', 'default' => false]
+        ],
+		'start' => [
+			'exclude'   => true,
+			'inputType' => 'text',
+			'eval'      => ['rgxp' => 'datim', 'datepicker' => true, 'tl_class' => 'w50 wizard'],
+			'sql'       => "varchar(10) NOT NULL default ''"
+        ],
+		'stop' => [
+			'exclude'   => true,
+			'inputType' => 'text',
+			'eval'      => ['rgxp' => 'datim', 'datepicker' => true, 'tl_class' => 'w50 wizard'],
+			'sql'       => "varchar(10) NOT NULL default ''"
+        ]
+    ]
+];
