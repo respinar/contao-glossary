@@ -18,88 +18,85 @@ use Contao\Input;
 /**
  * Table tl_glossary
  */
-$GLOBALS['TL_DCA']['tl_glossary'] = array(
-    'config'      => array(
+$GLOBALS['TL_DCA']['tl_glossary'] = [
+    'config' => [
         'dataContainer'    => DC_Table::class,
-        'ctabel'           => array('tl_glossary_term'),
+        'ctabel'           => ['tl_glossary_term'],
         'enableVersioning' => true,
         'switchToEdit'     => true,
         'markAsCopy'       => 'title',
-        'sql'              => array(
-            'keys' => array(
+        'sql'              => [
+            'keys' => [
                 'id' => 'primary'
-            )
-        ),
-    ),
-    'list'        => array(
-        'sorting'           => array(
+            ]
+        ],
+    ],
+    'list' => [
+        'sorting' => [
             'mode'        => DataContainer::MODE_UNSORTED,
-            'fields'      => array('title'),
+            'fields'      => ['title'],
             'panelLayout' => 'filter;search,limit'
-        ),
-        'label'             => array(
-            'fields' => array('title'),
+        ],
+        'label' => [
+            'fields' => ['title'],
             'format' => '%s',
-        ),
-        'global_operations' => array(
-            'all' => array(
+        ],
+        'global_operations' => [
+            'all' => [
                 'href'       => 'act=select',
                 'class'      => 'header_edit_all',
                 'attributes' => 'onclick="Backend.getScrollOffset()" accesskey="e"'
-            )
-        ),
-        'operations'        => array(
-            'edit'   => array(
+            ]
+        ],
+        'operations' => [
+            'edit' => [
                 'href'  => 'table=tl_glossary_term',
                 'icon'  => 'edit.svg'
-            ),
-            'editheader'   => array(
+            ],
+            'editheader' => [
                 'href'  => 'act=edit',
                 'icon'  => 'header.svg'
-            ),
-            'copy'   => array(
+            ],
+            'copy' => [
                 'href'  => 'act=copy',
                 'icon'  => 'copy.svg'
-            ),
-            'delete' => array(
+            ],
+            'delete' => [
                 'href'       => 'act=delete',
                 'icon'       => 'delete.svg',
                 'attributes' => 'onclick="if(!confirm(\'' . ($GLOBALS['TL_LANG']['MSC']['deleteConfirm'] ?? null) . '\'))return false;Backend.getScrollOffset()"'
-            ),
-            'show'   => array(
+            ],
+            'show'   => [
                 'href'       => 'act=show',
                 'icon'       => 'show.svg',
                 'attributes' => 'style="margin-right:3px"'
-            ),
-        )
-    ),
+            ],
+        ]
+    ],
 
     // Palettes
-    'palettes' => array
-	(
-		'__selector__'                => array(),
-		'default'                     => '
-            {title_legend},title;'
-	),
+    'palettes' => [
+		'__selector__' => [],
+		'default' => '{title_legend},title;'
+	],
 
 	// Subpalettes
-	'subpalettes' => array
-	(
-		'protected'                   => 'groups',
-	),
-    'fields' => array(
-        'id' => array(
+	'subpalettes' => [
+		'protected' => 'groups',
+	],
+    'fields' => [
+        'id' => [
             'sql' => "int(10) unsigned NOT NULL auto_increment"
-        ),
-        'tstamp' => array(
+        ],
+        'tstamp' => [
             'sql' => "int(10) unsigned NOT NULL default 0"
-        ),
-        'title' => array(
+        ],
+        'title' => [
             'exclude'   => true,
 			'search'    => true,
 			'inputType' => 'text',
-			'eval'      => array('mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50'),
+			'eval'      => ['mandatory' => true, 'maxlength' => 255, 'tl_class' => 'w50'],
 			'sql'       => "varchar(255) NOT NULL default ''"
-        )
-    )
-);
+        ]
+    ]
+];
